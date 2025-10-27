@@ -393,7 +393,7 @@ end end
 fhrp.Anchored=true
 fhrp.CFrame=CFrame.new(0,10^10,0)
 AddSignal(char.Humanoid.AnimationPlayed:Connect(function(v)
-if v.Animation.AnimationId == "rbxassetid://82531319990304" then
+if v.Animation.AnimationId == "rbxassetid://127171275866632" then
 
 local Anim = Instance.new("Animation")
 Anim.AnimationId = "rbxassetid://127374795448558"
@@ -550,7 +550,7 @@ local alractive = false
 local alractivee = false 
 local countr = 0
 AddSignal(char.Humanoid.AnimationPlayed:Connect(function(v)
-if v.Animation.AnimationId == "rbxassetid://91612881930599" then
+if v.Animation.AnimationId == "rbxassetid://85569553424083" then
 if char.Humanoid.FloorMaterial == Enum.Material.Air then
 countr=countr+1
 alractivee = true
@@ -637,7 +637,7 @@ countr = 0
 
 end end end), "Move3 (Air Variant)")
 AddSignal(char.Humanoid.AnimationPlayed:Connect(function(v)
-if v.Animation.AnimationId == "rbxassetid://89789861260778" then
+if v.Animation.AnimationId == "rbxassetid://100446064103831" then
 if char.Humanoid.FloorMaterial == Enum.Material.Air then
 
 local bv = Instance.new('BodyVelocity')
@@ -870,7 +870,7 @@ AddSignal(ye.ItemName.MouseButton1Click:Connect(function()
 spawn(function() Six() end)
 end), "Move6 (Tap)") end
 AddSignal(char.Humanoid.AnimationPlayed:Connect(function(v)
-if v.Animation.AnimationId == "rbxassetid://15112244663" then
+if v.Animation.AnimationId == "rbxassetid://110978068388232" then
 local Anim = Instance.new("Animation")
 Anim.AnimationId = "rbxassetid://17818077320"
 local k = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(Anim)
@@ -925,8 +925,8 @@ end
 end end), "Front Dash Special")
 
 AddSignal(char.Humanoid.AnimationPlayed:Connect(function(v)
-if v.Animation.AnimationId == "rbxassetid://9443521999" 
-or v.Animation.AnimationId == "rbxassetid://9443520855" 
+if v.Animation.AnimationId == "rbxassetid://75203303352791" 
+or v.Animation.AnimationId == "rbxassetid://117223862448096" 
 then
 
 local v = e.FacelessDash:Clone() 
@@ -981,7 +981,7 @@ v:Destroy()
 end end), "Custom Dash")
 
 AddSignal(char.Humanoid.AnimationPlayed:Connect(function(v)
-if v.Animation.AnimationId == "rbxassetid://9443517965" 
+if v.Animation.AnimationId == "rbxassetid://134581973800784" 
 then
 
 hrp.Velocity=Vector3.new(hrp.Velocity.X*45,hrp.Velocity.Y,hrp.Velocity.Z*45)
@@ -1039,7 +1039,7 @@ task.wait(.5)
 v:Destroy()
 end end), "BackDash Special")
 AddSignal(char.Humanoid.AnimationPlayed:Connect(function(v)
-if v.Animation.AnimationId == "rbxassetid://109589999483754" then
+if v.Animation.AnimationId == "rbxassetid://84039122607068" then
 hrp.CFrame=hrp.CFrame*CFrame.new(0,0,-15)
 local hit = false 
 for i = 1,150 do
@@ -1299,7 +1299,7 @@ task.wait() until char.Humanoid.WalkSpeed <= 20 or char.Humanoid.Health == 0 k:S
 end end), "Run")
 
 AddSignal(char.Humanoid.AnimationPlayed:Connect(function(v)
-if v.Animation.AnimationId == "rbxassetid://124754942092998" then
+if v.Animation.AnimationId == "rbxassetid://119042572747325" then
 v:Stop()
 Skill(hrp,.2)
 local Anim = Instance.new("Animation")
@@ -1315,7 +1315,7 @@ k:Stop(.3)
 end end), "M3")
 
 AddSignal(char.Humanoid.AnimationPlayed:Connect(function(v)
-if v.Animation.AnimationId == "rbxassetid://18846293639" then
+if v.Animation.AnimationId == "rbxassetid://105287938257399" then
 v:Stop()
 Skill(hrp,.2)
 local Anim = Instance.new("Animation")
