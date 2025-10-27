@@ -1,3 +1,4 @@
+
 function info(txt,dly)
 if dly == nil then dly = 2 end
 spawn(function() 
@@ -837,7 +838,7 @@ local uis = game:GetService("UserInputService")
 function Six()
 if char.Info:FindFirstChild('Stun') or char.Info:FindFirstChild('InSkill') then return end
 if CD.Value == 'false' then 
-CD.Value = 'true'
+warn('go')
 ye.Cooldown.Size = UDim2.new(1,0,0,0)
 game:GetService("TweenService"):Create(ye.Cooldown,TweenInfo.new(8.2,Enum.EasingStyle.Linear),{
 Size = UDim2.new(1,0,1,0)
@@ -869,8 +870,11 @@ end), "Move6 (Keybind)")
 AddSignal(ye.ItemName.MouseButton1Click:Connect(function()
 spawn(function() Six() end)
 end), "Move6 (Tap)") end
+local CD = Instance.new('StringValue')
+CD.Value = 'false'
 AddSignal(char.Humanoid.AnimationPlayed:Connect(function(v)
 if v.Animation.AnimationId == "rbxassetid://110978068388232" then
+CD.Value = 'true'
 local Anim = Instance.new("Animation")
 Anim.AnimationId = "rbxassetid://17818077320"
 local k = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(Anim)
@@ -881,7 +885,7 @@ spawn(function()
 while v.IsPlaying do 
 k.TimePosition = .2+v.TimePosition/3
 task.wait(.01) end 
-k:Stop(.5) print()
+k:Stop(.5)
 end)
 ye.Cooldown.Size = UDim2.new(1,0,1,0)
 game:GetService("TweenService"):Create(ye.Cooldown,TweenInfo.new(6,Enum.EasingStyle.Linear),{
@@ -889,7 +893,7 @@ Size = UDim2.new(1,0,0,0)
 }):Play() task.delay(6,function()
 CD.Value = 'false'
 end)
-if  CD.Value == 'true' then
+if CD.Value == 'true' then
 v:Stop() 
 local Anim = Instance.new("Animation")
 Anim.AnimationId = "rbxassetid://17588165564"
@@ -1099,6 +1103,7 @@ ye.Cooldown.UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00,
 Color3.fromRGB(255, 0, 0)), ColorSequenceKeypoint.new(1.00,
 Color3.fromRGB(0, 0, 0))}
 ye.Cooldown.BackgroundColor3=Color3.new(.3,0,0)
+local uis = game:GetService('UserInputService')
 AddSignal(uis.InputBegan:Connect(function(inputs, event)
 if event == true then return end
 if inputs.KeyCode == Enum.KeyCode.Seven then
